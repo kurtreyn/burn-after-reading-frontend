@@ -38,7 +38,10 @@ function Message({ messages }) {
       redirect: 'follow',
     };
 
-    fetch(`http://localhost:2000/${delId}`, requestOptions)
+    fetch(
+      `https://burn-after-reading-server.herokuapp.com/${delId}`,
+      requestOptions
+    )
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log('error', error));

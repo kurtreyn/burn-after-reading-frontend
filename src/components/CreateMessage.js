@@ -24,7 +24,10 @@ function CreateMessage() {
     };
     setLoading(true);
     try {
-      await fetch('http://localhost:2000/new', requestOptions);
+      await fetch(
+        'https://burn-after-reading-server.herokuapp.com/new',
+        requestOptions
+      );
     } catch (errors) {
       console.log(errors);
       alert(errors.message);

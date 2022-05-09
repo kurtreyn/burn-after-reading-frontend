@@ -11,7 +11,9 @@ function Main() {
   const fetchMessages = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:2000/');
+      const response = await fetch(
+        'https://burn-after-reading-server.herokuapp.com/'
+      );
       let data = await response.json();
       setMessages(data);
       setLoading(false);
